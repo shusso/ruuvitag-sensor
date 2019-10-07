@@ -9,10 +9,6 @@ jobs:
       with:
         python-version: '3.6.9'
         architecture: 'x64'
-    - name: Install
-      run: |
-        python3 -m pip install -e .
-        pip3 install nose mock
     - name: Tests
       run: 
-        nosetests -v --nocapture -s
+        python3 setup.py test
